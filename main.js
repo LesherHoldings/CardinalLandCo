@@ -4,8 +4,11 @@
 (function () {
   'use strict';
 
-  var PHONE_DISPLAY = '717-715-4262';
-  var EMAIL = 'Joe.Lesher@CardinalLand.com';
+  // Contact points. The same strings are used verbatim in every HTML file,
+  // so a single find-and-replace updates the whole site.
+  var PHONE_DISPLAY = '717-123-4567';
+  var PHONE_HREF = 'tel:717-123-4567';
+  var EMAIL = 'info@CardinalLand.com';
 
   /* ---- Mobile navigation ------------------------------------------------ */
   var toggle = document.querySelector('.nav-toggle');
@@ -94,10 +97,10 @@
 
       var body = document.createElement('p');
       body.appendChild(document.createTextNode(
-        'We received your request. Joe will look over what you sent and call you to talk it through. ' +
+        'We received your request. We will look over what you sent and call you to talk it through. ' +
         'If you would rather not wait, call '));
       var tel = document.createElement('a');
-      tel.href = 'tel:+17177154262';
+      tel.href = PHONE_HREF;
       tel.textContent = PHONE_DISPLAY;
       body.appendChild(tel);
       body.appendChild(document.createTextNode('.'));

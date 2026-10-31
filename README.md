@@ -29,9 +29,17 @@ Static marketing site: plain HTML, one shared stylesheet, one small script. No b
 3. In hPanel, enable the free SSL certificate for cardinalland.com if it is not already active, then uncomment the HTTPS redirect block at the bottom of `.htaccess`.
 4. Visit https://cardinalland.com/ and https://cardinalland.com/sitemap.xml to confirm, then submit the sitemap in Google Search Console.
 
+## Replacing the placeholder phone number
+
+The phone number `717-123-4567` is a placeholder and appears in exactly one format everywhere, including `tel:` links, the schema metadata and `main.js`. When the real number arrives, one pass replaces it all:
+
+```
+grep -rl "717-123-4567" --include="*.html" --include="*.js" --include="*.md" . | xargs sed -i "s/717-123-4567/NEW-NUMBER/g"
+```
+
 ## Wiring up the form (Formspree)
 
-1. Create a free account at https://formspree.io, add a new form, and set its notification email to `Joe.Lesher@CardinalLand.com`.
+1. Create a free account at https://formspree.io, add a new form, and set its notification email to `info@CardinalLand.com`.
 2. Copy the form's endpoint, which looks like `https://formspree.io/f/abcdwxyz`.
 3. In `index.html`, find the `TODO` comment above the `<form>` and replace `YOUR_FORM_ID` in the `action` attribute with the ID from step 2.
 4. Upload the updated `index.html`, submit a test request, and confirm the email arrives. The first submission from a new form asks you to confirm the address once.
