@@ -44,10 +44,6 @@
   });
   if (window.location.hash === '#offer' && offerBox) {
     prefillOffer();
-    if (assessment) {
-      // Let the browser land on the form section rather than the checkbox itself.
-      window.setTimeout(function () { assessment.scrollIntoView(); }, 0);
-    }
   }
 
   /* ---- Assessment form: submit to Formspree without a page reload ------- */
@@ -64,7 +60,7 @@
       }
       var originalLabel = submitBtn ? submitBtn.textContent : '';
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending'; }
-      if (status) { status.textContent = ''; status.className = 'form-status'; }
+      if (status) { status.textContent = 'Sending your request.'; status.className = 'form-status'; }
 
       fetch(form.action, {
         method: 'POST',
@@ -75,8 +71,12 @@
         showThanks();
       }).catch(function () {
         if (status) {
-          status.textContent = 'Something went wrong and your request was not sent. ' +
-            'Please call ' + PHONE_DISPLAY + ' or email ' + EMAIL + '.';
+          status.textContent = 'Something went wrong and your request was not sent. Please call ';
+          var errTel = document.createElement('a');
+          errTel.href = PHONE_HREF;
+          errTel.textContent = PHONE_DISPLAY;
+          status.appendChild(errTel);
+          status.appendChild(document.createTextNode(' or email ' + EMAIL + '.'));
           status.className = 'form-status error';
         }
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
@@ -84,8 +84,6 @@
     });
 
     function showThanks() {
-      var nameField = form.elements.namedItem('name');
-      var first = nameField && nameField.value ? nameField.value.trim().split(/\s+/)[0] : '';
       var box = document.createElement('div');
       box.className = 'callout form-thanks';
       box.setAttribute('role', 'status');
@@ -93,7 +91,7 @@
 
       var title = document.createElement('p');
       title.className = 'callout-title';
-      title.textContent = first ? 'Thank you, ' + first + '.' : 'Thank you.';
+      title.textContent = 'Thank you.';
 
       var body = document.createElement('p');
       body.appendChild(document.createTextNode(
