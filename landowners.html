@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solar, Gas, Mineral &amp; Timber Leases in PA | Cardinal Land</title>
-  <meta name="description" content="Thinking about a solar or gas lease, or whether to sell mineral rights or timber in Pennsylvania? How each one works, and the questions to ask before you sign.">
+  <meta name="description" content="Thinking about a Pennsylvania solar lease or gas lease, or whether to sell mineral rights or timber? How each works, and the questions to ask before you sign.">
   <link rel="canonical" href="https://cardinalland.com/landowners.html">
 
   <meta property="og:type" content="website">
@@ -26,6 +26,7 @@
 
   <link rel="preload" href="assets/fonts/libre-caslon-text-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>.site-nav { display: block; } .nav-toggle { display: none; }</style></noscript>
 
   <script type="application/ld+json">
   {
@@ -43,7 +44,12 @@
       "telephone": "717-123-4567",
       "email": "info@CardinalLand.com"
     },
-    "about": ["Solar leasing", "Natural gas leasing", "Mineral rights", "Timber sales"],
+    "about": [
+      { "@type": "Thing", "name": "Solar leasing" },
+      { "@type": "Thing", "name": "Natural gas leasing" },
+      { "@type": "Thing", "name": "Mineral rights" },
+      { "@type": "Thing", "name": "Timber sales" }
+    ],
     "audience": { "@type": "Audience", "audienceType": "Pennsylvania landowners" }
   }
   </script>
@@ -58,10 +64,7 @@
         <span class="nav-toggle-label">Menu</span>
       </button>
       <a class="brand" href="index.html" aria-label="Cardinal Land Company, home">
-        <picture>
-          <source srcset="assets/logo-red-lockup.webp" type="image/webp">
-          <img src="assets/logo-red-lockup.png" alt="Cardinal Land Company" width="480" height="431" fetchpriority="high" decoding="async">
-        </picture>
+        <img src="assets/logo-red-lockup.png" alt="Cardinal Land Company" width="480" height="431" fetchpriority="high" decoding="async">
       </a>
       <a class="header-phone" href="tel:717-123-4567">Call<span class="num"> 717-123-4567</span></a>
       <nav class="site-nav" id="site-nav" aria-label="Main">
@@ -79,10 +82,10 @@
   <main id="main">
 
     <!-- Page title -->
-    <section class="page-title">
+    <section class="page-title" aria-labelledby="landowners-title">
       <div class="container">
         <p class="eyebrow">For Pennsylvania landowners</p>
-        <h1>Four ways your land can pay you</h1>
+        <h1 id="landowners-title">Four ways your land can pay you</h1>
         <hr class="rule-red center" aria-hidden="true">
         <p class="lede">Solar, natural gas, minerals, and timber. What each one is, how the money tends to flow, and the questions to ask before you sign anything.</p>
         <nav class="jump-nav section-foot" aria-label="On this page">
@@ -107,14 +110,14 @@
         <div class="split">
           <div class="prose">
             <h3>What it is</h3>
-            <p>Solar developers build large arrays that sell power onto the grid. They look for open, fairly flat ground with few trees and good drainage, close to a substation or a three-phase power line. Fields that have been farmed for generations are often exactly what they want. That is why so many Pennsylvania farmers are getting letters.</p>
+            <p>Solar developers build large arrays that sell power onto the grid. They look for open, fairly flat ground with few trees and good drainage, close to a substation or a three-phase power line. Fields that have been farmed for generations are often exactly what they want. That is why Pennsylvania farmers are getting letters.</p>
             <p>Most solar leases begin with an option or development period. The company pays a smaller amount to hold the land while it studies the site, lines up a grid connection, and applies for permits. That stage can take years, and many projects never get built. If the project goes ahead, the lease moves into an operating term that often runs 25 years or more, with options to extend it further. Rent is usually figured by the acre and paid each year. Whether it rises over time depends on what the lease says.</p>
-            <p>The land comes out of crops for the life of the lease. Farmland enrolled in Pennsylvania&rsquo;s Clean and Green program can face roll-back taxes when its use changes, and the lease should say who pays them. At the end of the term the company is supposed to remove the panels and restore the ground. How that is guaranteed, and who is responsible if the original company is long gone, is one of the most important things in the document.</p>
-            <p>A solar lease is a long commitment. It will outlast most mortgages and a good many of the people who sign it. It deserves a slow read and your own attorney.</p>
+            <p>The land comes out of crops for the life of the lease. Farmland enrolled in Pennsylvania&rsquo;s Clean and Green program can face roll-back taxes when its use changes, and the lease should say who pays them. At the end of the term, most leases call for the company to remove the panels and restore the ground. How that is guaranteed, and who is responsible if the original company is long gone, is one of the most important things in the document.</p>
+            <p>A solar lease is a long commitment. It will outlast most mortgages, and it binds whoever owns the land after you. It deserves a slow read and your own attorney.</p>
             <h3>How we help</h3>
             <p>We look at your ground the way a developer would: acreage, slope, tree cover, distance to a substation or a three-phase line, and what is being built in your part of the state. Then we tell you plainly whether your land fits. If it does, we introduce you to solar companies we have checked out. They pay our fee, not you. Your own attorney reviews the lease before you sign anything.</p>
           </div>
-          <aside class="aside-box" aria-labelledby="solar-questions">
+          <aside class="aside-box" aria-label="Questions to ask before signing a solar lease">
             <h3 id="solar-questions">Questions to ask before signing</h3>
             <ul class="list">
               <li>How long is the option or development period, what is paid during it, and what happens if the project is never built?</li>
@@ -144,13 +147,13 @@
           <div class="prose">
             <h3>What it is</h3>
             <p>Gas companies lease the right to drill for and produce natural gas from beneath the land. In Pennsylvania that mostly means the Marcellus and Utica shale, which lie under a large part of the state. A single well pad can draw from many tracts, so when a company moves into a county it often approaches many owners at the same time.</p>
-            <p>The first question is what you own. In Pennsylvania the oil and gas rights can be separated from the surface, and on many farms they were, generations ago. A family can own and work the land and not own the gas beneath it. The deed and the county records answer that question, and it is worth knowing the answer before anyone sits down at your kitchen table.</p>
+            <p>The first question is what you own. In Pennsylvania the oil and gas rights can be separated from the surface, and on many farms they were, generations ago. A family can own and work the land and not own the gas beneath it. A title search of the deed and the county records usually answers that question, and it is worth knowing the answer before anyone sits down at your kitchen table.</p>
             <p>A gas lease commonly pays a signing bonus up front and a royalty on whatever is produced. Pennsylvania law sets a minimum royalty for oil and gas leases. The primary term is usually a few years, but once a well is producing, the lease can stay in force for as long as production continues. Old leases on a property can be held that way for decades, which is why it is also worth knowing whether your land is already under one.</p>
             <p>What happens on the surface matters as much as what happens below it. Well pads, access roads, pipelines, water lines, and compressor stations all take ground. A lease can limit where those go, or it can leave the company free to choose. Shut-in clauses, pooling with neighboring tracts, and what may be deducted before your royalty is figured are all terms your attorney should read closely.</p>
             <h3>How we help</h3>
             <p>We check what the records show you own, which companies are active in your county, and whether your tract is the kind they are leasing now. Then we tell you what we find. If there is real interest, we introduce you to companies we have checked out, and they pay our fee. Your own attorney reviews the lease.</p>
           </div>
-          <aside class="aside-box" aria-labelledby="gas-questions">
+          <aside class="aside-box" aria-label="Questions to ask before signing a natural gas lease">
             <h3 id="gas-questions">Questions to ask before signing</h3>
             <ul class="list">
               <li>Does the deed say you own the oil and gas rights, or were they severed years ago?</li>
@@ -179,14 +182,14 @@
         <div class="split">
           <div class="prose">
             <h3>What it is</h3>
-            <p>In Pennsylvania, what lies under a piece of land can be owned separately from the surface. Coal, oil and gas, stone, sand, and gravel can each be severed from the surface and sold, leased, or passed down on their own. A tract that has been in one family for a century may have had its rights split off more than once along the way.</p>
-            <p>Many landowners simply do not know what they own. The deed may be silent, or it may refer back to an older deed nobody has read in decades. A title search at the county courthouse answers the question. An attorney or a title company can run one, and it is worth doing before you answer any offer.</p>
-            <p>An offer to buy your mineral rights is a different thing from a lease. A lease ends. A sale is permanent, and it binds your heirs. The companies and individuals who buy mineral rights are often investors rather than operators. They are not planning to drill or mine themselves. They are betting that the rights will be worth more later than they pay you today.</p>
+            <p>In Pennsylvania, what lies under a piece of land can be owned separately from the surface. Coal, oil and gas, and other minerals can be severed from the surface and sold, leased, or passed down on their own. A tract that has been in one family for a century may have had its rights split off more than once along the way.</p>
+            <p>Many landowners simply do not know what they own. The deed may be silent, or it may refer back to an older deed nobody has read in decades. A title search at the county courthouse usually answers the question. An attorney or a title company can run one, and it is worth doing before you answer any offer.</p>
+            <p>An offer to buy your mineral rights is a different thing from a lease. A lease has a term, even if production can stretch it out for many years. A sale is permanent. The rights never come back to you or to your heirs. The companies and individuals who buy mineral rights are often investors rather than operators. Many do not plan to drill or mine themselves. They buy rights to hold or resell, expecting them to be worth more later than they pay today.</p>
             <p>There are honest reasons to sell. Some owners would rather have money now than a royalty that may never come. Others want to settle an estate or clean up a title before the land passes to the next generation. The point is to decide with the facts in hand, not because a letter arrived with a deadline on it.</p>
             <h3>How we help</h3>
             <p>We help you find out what the records show you own, who is buying or leasing in your county, and what else is happening in your part of the state. Then we tell you plainly what we find. If you want to go further, we introduce you to buyers and operators we have checked out, and they pay our fee. Your own attorney handles the title work and the papers.</p>
           </div>
-          <aside class="aside-box" aria-labelledby="minerals-questions">
+          <aside class="aside-box" aria-label="Questions to ask before signing a mineral rights deal">
             <h3 id="minerals-questions">Questions to ask before signing</h3>
             <ul class="list">
               <li>What exactly do the deed and the county records say you own beneath the surface?</li>
@@ -222,7 +225,7 @@
             <h3>How we help</h3>
             <p>We look at your woods, your access, and what you want from the land, and we tell you plainly what we see and whether buyers are likely to be interested. If you want to sell, we introduce you to reputable buyers we have checked out, and to consulting foresters who can inventory and mark the stand. The buyers pay our fee, not you. Your own attorney reviews the contract.</p>
           </div>
-          <aside class="aside-box" aria-labelledby="timber-questions">
+          <aside class="aside-box" aria-label="Questions to ask before signing a timber contract">
             <h3 id="timber-questions">Questions to ask before signing</h3>
             <ul class="list">
               <li>Has a consulting forester inventoried the stand and marked the trees to be cut?</li>
@@ -233,7 +236,7 @@
               <li>How will the woods be left: skid trails, log landings, tops, stream crossings, and the condition of your roads and gates?</li>
               <li>Who is liable for damage to fences, crops, buildings, and neighboring property, and does the buyer carry liability insurance and workers&rsquo; compensation?</li>
               <li>Will a written contract be signed before any equipment comes onto the property?</li>
-              <li>Have you asked the DCNR service forester for your county, or your own attorney, to look the contract over?</li>
+              <li>Have you talked with the DCNR service forester for your county, and has your own attorney read the contract?</li>
             </ul>
           </aside>
         </div>
@@ -243,11 +246,11 @@
     <!-- Lease-offer callout -->
     <section class="section" aria-labelledby="offer-title">
       <div class="container">
-        <aside class="callout">
+        <div class="callout">
           <p class="callout-title" id="offer-title">Already holding an offer?</p>
           <p><strong>Don&rsquo;t sign yet &mdash; get a second opinion first. It costs you nothing.</strong></p>
           <a class="btn" href="index.html#offer" data-prefill-offer>Get a second opinion</a>
-        </aside>
+        </div>
       </div>
     </section>
 
@@ -269,16 +272,13 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <picture>
-            <source srcset="assets/logo-charcoal-lockup.webp" type="image/webp">
-            <img src="assets/logo-charcoal-lockup.png" alt="Cardinal Land Company" width="480" height="431" loading="lazy" decoding="async">
-          </picture>
+          <img src="assets/logo-charcoal-lockup.png" alt="Cardinal Land Company" width="480" height="431" loading="lazy" decoding="async">
         </div>
         <div class="footer-contact">
           <p><strong>Cardinal Land Company</strong></p>
           <p><a href="tel:717-123-4567">717-123-4567</a></p>
           <p><a href="mailto:info@CardinalLand.com">info@CardinalLand.com</a></p>
-          <p>Mountville, Pennsylvania&nbsp;&middot; Serving all of Pennsylvania</p>
+          <p>Mountville, Pennsylvania&nbsp;&middot; <span class="nowrap">Serving all of Pennsylvania</span></p>
         </div>
         <nav class="footer-nav" aria-label="Footer">
           <ul>
@@ -290,7 +290,7 @@
           </ul>
         </nav>
       </div>
-      <p class="service-line">Solar &middot; Natural Gas &middot; Minerals &middot; Timber</p>
+      <p class="service-line">Solar&nbsp;&middot; Natural Gas&nbsp;&middot; Minerals&nbsp;&middot; Timber</p>
       <p class="disclaimer">Cardinal Land Company provides land assessments and introductions to energy and land companies. We are compensated by those companies. We do not provide legal, financial, or appraisal services.</p>
       <p class="copyright">&copy; 2026 Cardinal Land Company &middot; Veteran-owned</p>
     </div>

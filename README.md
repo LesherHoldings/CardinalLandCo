@@ -9,7 +9,7 @@ Static marketing site: plain HTML, one shared stylesheet, one small script. No b
 | `index.html` | Home: hero, lease-offer callout, how it works, four land uses, why landowners call, assessment form |
 | `how-it-works.html` | The three steps in depth, what we do not do, FAQ |
 | `landowners.html` | Solar, natural gas, minerals, timber: what each is and questions to ask before signing |
-| `about.html` | Joe Lesher, how the firm works, note for energy company land departments |
+| `about.html` | The principal, how the firm works, note for energy company land departments |
 | `404.html` | Not-found page (uses root-absolute paths because Apache serves it at any URL) |
 | `styles.css` | Shared stylesheet, mobile-first |
 | `main.js` | Mobile menu, Formspree submit without reload, offer pre-check, mobile call bar |
@@ -17,7 +17,7 @@ Static marketing site: plain HTML, one shared stylesheet, one small script. No b
 | `.htaccess` | Caching, compression, 404 routing, optional HTTPS redirect (commented) |
 | `favicon.ico` | Browser tab icon, from the charcoal cardinal |
 | `assets/logo-red.png`, `assets/logo-charcoal.png` | Original logo files as supplied |
-| `assets/logo-*-lockup.png/.webp` | Web-optimized transparent logos used in header and footer |
+| `assets/logo-red-lockup.png`, `assets/logo-charcoal-lockup.png` | Web-optimized transparent logos used in the header and footer |
 | `assets/og-image.png` | 1200x630 Open Graph / social share image (red logo on cream) |
 | `assets/favicon-*.png`, `assets/icon-*.png`, `assets/apple-touch-icon.png` | Icon set |
 | `assets/fonts/*.woff2` | Libre Caslon Text, self-hosted (SIL Open Font License) |
